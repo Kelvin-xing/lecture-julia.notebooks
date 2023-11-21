@@ -1,3 +1,7 @@
 .DS_Store
 **/.ipynb_checkpoints
 .vscode/settings.json
+*.aux
+*.log
+*.synctex.gz
+*.pdf
