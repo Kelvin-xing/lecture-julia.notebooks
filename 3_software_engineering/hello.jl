@@ -12,3 +12,15 @@ function plot_results()
 end
 
 plot_results()
+
+using PkgTemplates
+t = Template(;dir = ".", julia = v"1.9",
+                plugins = [
+                    Git(; manifest = true, branch = "main"),
+                    Codecov(),
+                    GitHubActions(),
+                    !CompatHelper,
+                    !TagBot
+                ])
+
+t("MyProject")
